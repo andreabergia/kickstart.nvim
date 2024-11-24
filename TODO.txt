@@ -1,0 +1,7 @@
+- [ ] auto restore position
+- [ ] terminal horizontal (remove?)
+- [ ] copilot
+- [ ] fold
+- [ ] todo list
+- [ ] debugger
+- [ ] extract and centralize keymap

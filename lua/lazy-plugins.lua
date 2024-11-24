@@ -40,7 +40,10 @@
 require('lazy').setup({
   require 'plugins.editor',
   require 'plugins.gitsigns',
+  require 'plugins.git',
+  require 'plugins.git-blame',
   require 'plugins.which-key',
+  require 'plugins.project',
   require 'plugins.telescope',
   require 'plugins.lsp',
   require 'plugins.autoformat',
@@ -55,10 +58,15 @@ require('lazy').setup({
   require 'plugins.trouble',
   require 'plugins.alpha',
   require 'plugins.lualine',
-  require 'plugins.copilot',
+  require 'plugins.bufferline',
+  require 'plugins.terminal',
+  require 'plugins.grug',
+  require 'plugins.bufdelete',
 
-  -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.neo-tree',
+  -- TODO finish setup
+  require 'plugins.tree',
+  require 'plugins.copilot',
+  require 'plugins.debug',
 }, {
   ui = {
     icons = {},

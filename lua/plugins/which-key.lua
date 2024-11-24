@@ -11,6 +11,7 @@ return {
 
     -- Document existing key chains
     spec = {
+      { '<leader>b', group = '[B]uffers' },
       { '<leader>c', group = '[C]ode', mode = { 'n', 'x' } },
       { '<leader>f', group = '[F]ile' },
       { '<leader>d', group = '[D]ocument' },
@@ -20,6 +21,7 @@ return {
       { '<leader>t', group = '[T]oggle' },
       { '<leader>x', group = '[X]Trouble' },
       { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+      { '<leader>g', group = '[G]it' },
     },
   },
 }

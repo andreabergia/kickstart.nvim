@@ -1,7 +1,7 @@
 - [x] terminal horizontal (remove?)
+- [x] fold
 - [ ] auto restore position
 - [ ] copilot
-- [ ] fold
 - [ ] todo list
 - [ ] debugger
 - [ ] extract and centralize keymap

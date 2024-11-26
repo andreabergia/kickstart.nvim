@@ -1,5 +1,5 @@
+- [x] terminal horizontal (remove?)
 - [ ] auto restore position
-- [ ] terminal horizontal (remove?)
 - [ ] copilot
 - [ ] fold
 - [ ] todo list

@@ -1,6 +1,6 @@
 - [x] terminal horizontal (remove?)
 - [x] fold
-- [ ] auto restore position
+- [x] auto restore position
 - [ ] copilot
 - [ ] todo list
 - [ ] debugger

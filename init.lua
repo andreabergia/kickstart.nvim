@@ -5,6 +5,7 @@ vim.g.have_nerd_font = true
 require 'options'
 require 'keymap'
 require 'autocmd-highlight-post-copy'
+require 'autocmd-restore-position'
 require 'lazy-bootstrap'
 require 'lazy-plugins'
 

@@ -24,6 +24,10 @@ return {
       'rust',
       'javascript',
       'python',
+      'java',
+      'json5',
+      'rust',
+      'ron',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,

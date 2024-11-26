@@ -10,6 +10,6 @@ return {
 
     vim.keymap.set('n', '<leader>fg', function()
       grug_far.open {}
-    end, { desc = '[G]it [B]lame' })
+    end, { desc = '[F]ile [G]rep and replace' })
   end,
 }

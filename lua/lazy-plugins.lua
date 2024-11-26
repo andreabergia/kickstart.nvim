@@ -65,7 +65,7 @@ require('lazy').setup({
 
   -- TODO finish setup
   require 'plugins.tree',
-  require 'plugins.copilot',
+  -- require 'plugins.copilot',
   require 'plugins.debug',
 }, {
   ui = {

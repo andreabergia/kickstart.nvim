@@ -56,7 +56,7 @@ require('lazy').setup({
   require 'plugins.colorizer',
   require 'plugins.illuminate',
   require 'plugins.trouble',
-  require 'plugins.alpha',
+  require 'plugins.snacks',
   require 'plugins.lualine',
   require 'plugins.bufferline',
   require 'plugins.terminal',

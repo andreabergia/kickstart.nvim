@@ -67,9 +67,9 @@ require('lazy').setup({
   require 'plugins.flash',
   require 'plugins.todo-comment',
   require 'plugins.persistence',
+  require 'plugins.copilot',
 
   -- TODO finish setup
-  -- require 'plugins.copilot',
   require 'plugins.debug',
 }, {
   ui = {

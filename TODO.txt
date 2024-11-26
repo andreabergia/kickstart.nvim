@@ -1,7 +1,7 @@
 - [x] terminal horizontal (remove?)
 - [x] fold
 - [x] auto restore position
-- [ ] copilot
+- [x] copilot
 - [ ] TODO list does not seem to work
 - [ ] debugger
 - [ ] extract and centralize keymap

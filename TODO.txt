@@ -2,6 +2,6 @@
 - [x] fold
 - [x] auto restore position
 - [ ] copilot
-- [ ] todo list
+- [ ] TODO list
 - [ ] debugger
 - [ ] extract and centralize keymap

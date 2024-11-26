@@ -64,6 +64,8 @@ require('lazy').setup({
   require 'plugins.bufdelete',
   require 'plugins.fold',
   require 'plugins.tree',
+  require 'plugins.flash',
+  require 'plugins.todo-comment',
 
   -- TODO finish setup
   -- require 'plugins.copilot',

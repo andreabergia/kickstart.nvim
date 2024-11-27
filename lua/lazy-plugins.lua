@@ -70,6 +70,7 @@ require('lazy').setup({
   require 'plugins.copilot',
   require 'plugins.neotest',
   require 'plugins.rustacean',
+  require 'plugins.aerial',
 
   -- TODO finish setup
   require 'plugins.debug',

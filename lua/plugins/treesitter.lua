@@ -26,7 +26,6 @@ return {
       'python',
       'java',
       'json5',
-      'rust',
       'ron',
     },
     -- Autoinstall languages that are not installed

@@ -68,6 +68,7 @@ require('lazy').setup({
   require 'plugins.todo-comment',
   require 'plugins.persistence',
   require 'plugins.copilot',
+  require 'plugins.neotest',
 
   -- TODO finish setup
   require 'plugins.debug',

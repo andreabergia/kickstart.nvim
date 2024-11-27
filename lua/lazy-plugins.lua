@@ -69,6 +69,7 @@ require('lazy').setup({
   require 'plugins.persistence',
   require 'plugins.copilot',
   require 'plugins.neotest',
+  require 'plugins.rustacean',
 
   -- TODO finish setup
   require 'plugins.debug',

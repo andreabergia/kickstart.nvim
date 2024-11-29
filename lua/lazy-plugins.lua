@@ -71,6 +71,7 @@ require('lazy').setup({
   require 'plugins.neotest',
   require 'plugins.rustacean',
   require 'plugins.aerial',
+  require 'plugins.better-whitespace',
 
   -- TODO finish setup
   require 'plugins.debug',

@@ -43,6 +43,6 @@ require('lazy').setup {
   require 'plugins.rustacean',
   require 'plugins.crates',
   require 'plugins.aerial',
-  require 'plugins.better-whitespace',
+  require 'plugins.whitespace-nvim',
   require 'plugins.debug',
 }

@@ -27,7 +27,6 @@ require('lazy').setup {
   require 'plugins.marks',
   require 'plugins.colorizer',
   require 'plugins.illuminate',
-  require 'plugins.trouble',
   require 'plugins.snacks',
   require 'plugins.lualine',
   require 'plugins.bufferline',

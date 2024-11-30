@@ -46,4 +46,5 @@ require('lazy').setup {
   require 'plugins.aerial',
   require 'plugins.whitespace-nvim',
   require 'plugins.debug',
+  require 'plugins.trouble',
 }

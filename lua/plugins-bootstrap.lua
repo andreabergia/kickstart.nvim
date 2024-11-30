@@ -11,6 +11,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup {
   require 'plugins.editor',
+  require 'plugins.mini',
   require 'plugins.gitsigns',
   require 'plugins.git',
   require 'plugins.git-blame',

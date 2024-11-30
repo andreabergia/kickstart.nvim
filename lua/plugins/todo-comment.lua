@@ -1,7 +1,8 @@
 return {
   'folke/todo-comments.nvim',
-  cmd = { 'TodoTrouble', 'TodoTelescope' },
+  dependencies = { 'nvim-lua/plenary.nvim' },
   opts = {},
+  -- TODO fix this
   -- stylua: ignore
   keys = {
     { "]t", function() require("todo-comments").jump_next() end, desc = "Next Todo Comment" },

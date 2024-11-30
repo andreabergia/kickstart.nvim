@@ -22,6 +22,7 @@ return {
       'vimdoc',
       'go',
       'rust',
+      'ron',
       'javascript',
       'python',
       'java',

@@ -70,6 +70,7 @@ require('lazy').setup({
   require 'plugins.copilot',
   require 'plugins.neotest',
   require 'plugins.rustacean',
+  require 'plugins.crates',
   require 'plugins.aerial',
   require 'plugins.better-whitespace',
 

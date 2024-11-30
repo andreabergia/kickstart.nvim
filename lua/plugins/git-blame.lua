@@ -6,6 +6,6 @@ return {
 
     vim.keymap.set('n', '<leader>gb', function()
       vim.cmd 'BlameToggle'
-    end, { desc = '[G]it [B]lame' })
+    end, { desc = 'Blame toggle' })
   end,
 }

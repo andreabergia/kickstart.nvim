@@ -23,8 +23,6 @@ return {
         end,
         desc = 'Previous Todo Comment',
       },
-      { '<leader>xt', '<cmd>Trouble todo toggle filter = {tag = {TODO,FIX,FIXME}}<cr>', desc = '[X]Trouble [T]odo' },
-      { '<leader>st', '<cmd>TodoTelescope keywords=TODO,FIX,FIXME<cr>', desc = '[S]earch [T]odo' },
     },
   },
 

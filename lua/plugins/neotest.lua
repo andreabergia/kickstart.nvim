@@ -16,23 +16,23 @@ return {
 
       vim.keymap.set('n', '<leader>tt', function()
         require('neotest').run.run()
-      end, { desc = '[T]est [t]est nearest' }),
+      end, { desc = 'Nearest test' }),
 
       vim.keymap.set('n', '<leader>tf', function()
         require('neotest').run.run(vim.fn.expand '%')
-      end, { desc = '[T]est [f]ile' }),
+      end, { desc = 'File' }),
 
       vim.keymap.set('n', '<leader>td', function()
         require('neotest').run.run { strategy = 'dap' }
-      end, { desc = '[T]est [d]ebug nearest' }),
+      end, { desc = 'Debug nearest' }),
 
       vim.keymap.set('n', '<leader>to', function()
         require('neotest').output.open { auto_close = true }
-      end, { desc = '[T]est [o]utput' }),
+      end, { desc = 'Output' }),
 
       vim.keymap.set('n', '<leader>tp', function()
         require('neotest').output_panel.toggle()
-      end, { desc = '[T]est output [p]anel' }),
+      end, { desc = 'Output panel' }),
     }
   end,
 }

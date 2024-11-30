@@ -11,6 +11,6 @@ return {
       backends = { 'lsp', 'treesitter', 'markdown' },
     }
 
-    vim.keymap.set('n', '<leader>fa', '<cmd>AerialToggle!<CR>', { desc = '[F]ile [A]erial' })
+    vim.keymap.set('n', '<leader>fa', '<cmd>AerialToggle!<CR>', { desc = 'Aerial view' })
   end,
 }

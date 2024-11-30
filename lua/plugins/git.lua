@@ -11,6 +11,6 @@ return {
 
     vim.keymap.set('n', '<leader>gg', function()
       neogit.open()
-    end, { desc = '[G]it [G]ui' })
+    end, { desc = 'Gui' })
   end,
 }

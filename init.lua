@@ -5,4 +5,4 @@ require 'options'
 require 'autocmd-highlight-post-copy'
 require 'autocmd-restore-position'
 require 'plugins-bootstrap'
-require 'keymap'
+require('keymap').init()

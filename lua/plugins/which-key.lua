@@ -11,17 +11,16 @@ return {
 
     -- Document existing key chains
     spec = {
-      { '<leader>b', group = '[B]uffers' },
-      { '<leader>c', group = '[C]ode', mode = { 'n', 'x' } },
-      { '<leader>f', group = '[F]ile' },
-      { '<leader>d', group = '[D]ocument' },
-      { '<leader>r', group = '[R]ename' },
-      { '<leader>s', group = '[S]earch' },
-      { '<leader>w', group = '[W]orkspace' },
-      { '<leader>t', group = '[T]oggle' },
-      { '<leader>x', group = '[X]Trouble' },
-      { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
-      { '<leader>g', group = '[G]it' },
+      { '<leader>b', group = 'Buffers' },
+      { '<leader>c', group = 'Code', mode = { 'n', 'x' } },
+      { '<leader>f', group = 'File' },
+      { '<leader>d', group = 'Debug' },
+      { '<leader>s', group = 'Search' },
+      { '<leader>t', group = 'Test' },
+      { '<leader>x', group = 'Trouble' },
+      { '<leader>h', group = 'Git hunk', mode = { 'n', 'v' } },
+      { '<leader>g', group = 'Git' },
+      { '<leader>p', group = 'Persistence' },
     },
   },
 }

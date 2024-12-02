@@ -5,15 +5,6 @@ return {
     dashboard = {
       sections = {
         { section = 'header' },
-
-        {
-          pane = 2,
-          section = 'terminal',
-          cmd = 'colorscript -e zwaves',
-          height = 7,
-          padding = 1,
-        },
-
         {
           icon = ' ',
           title = 'Keymaps',

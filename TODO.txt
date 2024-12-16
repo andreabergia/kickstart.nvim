@@ -1,0 +1,2 @@
+shortcut for previous/next hunk
+shortcut for previous/next LSP error

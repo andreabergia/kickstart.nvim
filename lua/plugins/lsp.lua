@@ -109,6 +109,9 @@ return {
           --  Most Language Servers support renaming across files, etc.
           map('<leader>cr', vim.lsp.buf.rename, 'Code Rename')
 
+          map(']q', vim.diagnostic.goto_next, 'Next Diagnostic')
+          map('[q', vim.diagnostic.goto_next, 'Previous Diagnostic')
+
           -- Execute a code action, usually your cursor needs to be on top of an error
           -- or a suggestion from your LSP for this to activate.
           map('<leader>ca', vim.lsp.buf.code_action, 'Code Action', { 'n', 'x' })

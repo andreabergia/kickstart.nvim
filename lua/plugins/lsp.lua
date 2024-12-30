@@ -83,14 +83,14 @@ return {
           -- Jump to the definition of the word under your cursor.
           --  This is where a variable was first declared, or where a function is defined, etc.
           --  To jump back, press <C-t>.
-          map('cd', require('telescope.builtin').lsp_definitions, 'Goto Definition')
+          map('<leader>cd', require('telescope.builtin').lsp_definitions, 'Goto Definition')
 
           -- Find references for the word under your cursor.
-          map('cr', require('telescope.builtin').lsp_references, 'Goto References')
+          map('<leader>cu', require('telescope.builtin').lsp_references, 'Usages / References')
 
           -- Jump to the implementation of the word under your cursor.
           --  Useful when your language has ways of declaring types without an actual implementation.
-          map('cI', require('telescope.builtin').lsp_implementations, 'Goto Implementation')
+          -- map('cI', require('telescope.builtin').lsp_implementations, 'Goto Implementation')
 
           -- Jump to the type of the word under your cursor.
           --  Useful when you're not sure what type a variable is and you want to see

@@ -122,6 +122,19 @@ return {
 
           map('<C-k>', vim.lsp.buf.signature_help, 'Signature help')
 
+          -- Set updatetime for CursorHold
+          -- 300ms of no cursor movement to trigger CursorHold
+          vim.opt.updatetime = 100
+
+          -- Show diagnostic popup on cursor hover
+          local diag_float_grp = vim.api.nvim_create_augroup('DiagnosticFloat', { clear = true })
+          vim.api.nvim_create_autocmd('CursorHold', {
+            callback = function()
+              vim.diagnostic.open_float(nil, { focusable = false })
+            end,
+            group = diag_float_grp,
+          })
+
           -- The following two autocommands are used to highlight references of the
           -- word under your cursor when your cursor rests there for a little while.
           --    See `:help CursorHold` for information about when this is executed

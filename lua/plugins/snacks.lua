@@ -1,5 +1,6 @@
 -- Startup splash
 return {
+  -- Launch screen
   'folke/snacks.nvim',
   opts = {
     dashboard = {

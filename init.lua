@@ -56,4 +56,5 @@ require('lazy').setup {
   require 'plugins.whitespace-nvim',
   require 'plugins.debug',
   require 'plugins.trouble',
+  require 'plugins.zen',
 }

@@ -5,6 +5,7 @@ return {
     'nvim-lua/plenary.nvim',
     'antoinemadec/FixCursorHold.nvim',
     'nvim-treesitter/nvim-treesitter',
+    'nvim-neotest/neotest-jest',
 
     -- Languages
   },
@@ -12,6 +13,15 @@ return {
     require('neotest').setup {
       adapters = {
         require 'rustaceanvim.neotest',
+
+        require 'neotest-jest' {
+          jestCommand = 'npm test --',
+          jestConfigFile = 'custom.jest.config.ts',
+          env = { CI = true },
+          cwd = function(path)
+            return vim.fn.getcwd()
+          end,
+        },
       },
 
       vim.keymap.set('n', '<leader>tt', function()

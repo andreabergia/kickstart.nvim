@@ -79,6 +79,9 @@ return {
     vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = 'Resume' })
     vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Buffers' })
     vim.keymap.set('n', '<leader>sp', extensions.projects.projects, { desc = 'Projects' })
+    vim.keymap.set('n', '<leader>sc', function()
+      builtin.find_files { cwd = vim.fn.expand '%:p:h' }
+    end, { desc = 'Current Directory' })
 
     vim.keymap.set('n', '<leader>bb', builtin.buffers, { desc = 'List' })
 

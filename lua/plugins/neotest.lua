@@ -5,6 +5,7 @@ return {
     'nvim-lua/plenary.nvim',
     'antoinemadec/FixCursorHold.nvim',
     'nvim-treesitter/nvim-treesitter',
+    'nvim-neotest/neotest-python',
     'nvim-neotest/neotest-jest',
 
     -- Languages
@@ -13,6 +14,8 @@ return {
     require('neotest').setup {
       adapters = {
         require 'rustaceanvim.neotest',
+
+        require 'neotest-python',
 
         require 'neotest-jest' {
           jestCommand = 'npm test --',

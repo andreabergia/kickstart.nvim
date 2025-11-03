@@ -8,9 +8,11 @@ return {
   dependencies = { 'hrsh7th/nvim-cmp' },
   config = function()
     require('nvim-autopairs').setup {
-      opts = {
-        -- skip autopair when the cursor is inside these treesitter nodes
-        skip_ts = { 'string' },
+      check_ts = true,
+      ts_config = {
+        lua = { 'string' },
+        javascript = { 'template_string' },
+        typescript = { 'template_string' },
       },
     }
     -- If you want to automatically add `(` after selecting a function or method

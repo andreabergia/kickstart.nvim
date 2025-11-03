@@ -3,8 +3,7 @@ return {
   config = function()
     require('project_nvim').setup {
       exclude_dirs = {
-        -- ServiceNow projects
-        '/Users/andrea.bergia/fluent',
+        -- Absolute path of directories to exclude
       },
     }
   end,

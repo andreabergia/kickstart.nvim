@@ -24,5 +24,5 @@ vim.keymap.set('n', ']t', function()
   vim.cmd 'tabnext'
 end, { desc = 'Next tab' })
 vim.keymap.set('n', '[t', function()
-  vim.cmd 'tabnext'
+  vim.cmd 'tabprevious'
 end, { desc = 'Previous tab' })

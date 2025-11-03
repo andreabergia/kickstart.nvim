@@ -27,7 +27,8 @@ return {
       'python',
       'java',
       'json5',
-      'ron',
+      'toml',
+      'tsx',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,

@@ -26,7 +26,9 @@ return {
       else
         lsp_format_opt = 'fallback'
       end
-      local force_dry_run_filetypes = { javascript = true }
+      local force_dry_run_filetypes = {
+        -- javascript = true
+      }
       return {
         timeout_ms = 500,
         lsp_format = lsp_format_opt,

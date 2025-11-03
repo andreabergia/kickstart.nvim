@@ -51,7 +51,7 @@ return {
 
       -- Toggles
       map('n', '<leader>gl', gitsigns.toggle_current_line_blame, { desc = 'Show inline blame' })
-      map('n', '<leader>gD', gitsigns.toggle_deleted, { desc = 'Show deleted line' })
+      map('n', '<leader>gp', gitsigns.preview_hunk_inline, { desc = 'Preview hunk inline' })
     end,
   },
 }

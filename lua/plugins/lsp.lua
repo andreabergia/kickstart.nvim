@@ -120,6 +120,7 @@ return {
           --  For example, in C this would take you to the header.
           map('gD', vim.lsp.buf.declaration, 'Goto Declaration')
 
+          map('<C-k>', vim.lsp.buf.signature_help, 'Signature help', 'i')
           map('<C-k>', vim.lsp.buf.signature_help, 'Signature help')
 
           -- Set updatetime for CursorHold

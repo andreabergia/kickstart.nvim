@@ -16,7 +16,11 @@ return {
     local cmp = require 'cmp'
 
     cmp.setup {
-      completion = { completeopt = 'menu,menuone,noinsert' },
+      completion = {
+        completeopt = 'menu,menuone,noinsert',
+        autocomplete = { cmp.TriggerEvent.InsertEnter, cmp.TriggerEvent.TextChanged },
+      },
+      preselect = cmp.PreselectMode.None,
 
       -- For an understanding of why these mappings were
       -- chosen, you will need to read `:help ins-completion`
@@ -38,7 +42,13 @@ return {
 
         -- If you prefer more traditional completion keymaps,
         -- you can uncomment the following lines
-        ['<CR>'] = cmp.mapping.confirm { select = true },
+        ['<CR>'] = cmp.mapping(function(fallback)
+          if cmp.visible() and cmp.get_active_entry() then
+            cmp.confirm { behavior = cmp.ConfirmBehavior.Insert, select = false }
+          else
+            fallback()
+          end
+        end),
         ['<Tab>'] = cmp.mapping.select_next_item(),
         ['<S-Tab>'] = cmp.mapping.select_prev_item(),
 
@@ -47,17 +57,19 @@ return {
         --  completions whenever it has completion options available.
         ['<C-Space>'] = cmp.mapping.complete {},
       },
-      sources = {
+      sources = cmp.config.sources({
         {
           name = 'lazydev',
           -- set group index to 0 to skip loading LuaLS completions as lazydev recommends it
           group_index = 0,
         },
-        { name = 'nvim_lsp' },
-        { name = 'path' },
-        { name = 'buffer' },
         { name = 'nvim_lsp_signature_help' },
-      },
+        { name = 'nvim_lsp' },
+      }, {
+        { name = 'path' },
+      }, {
+        { name = 'buffer' },
+      }),
     }
   end,
 }

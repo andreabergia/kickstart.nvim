@@ -43,11 +43,31 @@ return {
         -- If you prefer more traditional completion keymaps,
         -- you can uncomment the following lines
         ['<CR>'] = cmp.mapping(function(fallback)
-          if cmp.visible() and cmp.get_active_entry() then
-            cmp.confirm { behavior = cmp.ConfirmBehavior.Insert, select = false }
-          else
-            fallback()
+          if cmp.visible() then
+            local function is_signature(entry)
+              return entry and entry.source and entry.source.name == 'nvim_lsp_signature_help'
+            end
+
+            local entry = cmp.get_selected_entry() or cmp.get_active_entry()
+            if not entry then
+              cmp.select_next_item { behavior = cmp.SelectBehavior.Select }
+              entry = cmp.get_selected_entry()
+            end
+
+            local tries = 0
+            local max_tries = #cmp.get_entries()
+            while entry and is_signature(entry) and tries < max_tries do
+              cmp.select_next_item { behavior = cmp.SelectBehavior.Select }
+              entry = cmp.get_selected_entry()
+              tries = tries + 1
+            end
+
+            if entry and not is_signature(entry) then
+              cmp.confirm { behavior = cmp.ConfirmBehavior.Insert, select = false }
+              return
+            end
           end
+          fallback()
         end),
         ['<Tab>'] = cmp.mapping.select_next_item(),
         ['<S-Tab>'] = cmp.mapping.select_prev_item(),

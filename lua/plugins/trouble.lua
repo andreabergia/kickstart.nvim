@@ -33,5 +33,15 @@ return {
       '<cmd>Trouble telescope toggle<cr>',
       desc = 'Telescope results (Trouble)',
     },
+    {
+      ']x',
+      function() require('trouble').next({ skip_groups = true, jump = true }) end,
+      desc = 'Next Trouble result',
+    },
+    {
+      '[x',
+      function() require('trouble').prev({ skip_groups = true, jump = true }) end,
+      desc = 'Previous Trouble result',
+    },
   },
 }

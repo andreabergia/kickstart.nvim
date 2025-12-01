@@ -45,15 +45,27 @@ return {
 
     -- [[ Configure Telescope ]]
     -- See `:help telescope` and `:help telescope.setup()`
+
+    -- Custom function to open Telescope results in Trouble and focus the window
+    local open_with_trouble = function(prompt_bufnr)
+      require('trouble.sources.telescope').open(prompt_bufnr)
+      vim.cmd('Trouble telescope focus')
+    end
+
     require('telescope').setup {
       -- You can put your default mappings / updates / etc. in here
       --  All the info you're looking for is in `:help telescope.setup()`
       --
-      -- defaults = {
-      --   mappings = {
-      --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-      --   },
-      -- },
+      defaults = {
+        mappings = {
+          i = {
+            ['<C-t>'] = open_with_trouble,
+          },
+          n = {
+            ['<C-t>'] = open_with_trouble,
+          },
+        },
+      },
       -- pickers = {}
       extensions = {
         ['ui-select'] = {

@@ -1,16 +1,20 @@
 return {
   'folke/trouble.nvim',
-  opts = {}, -- for default options, refer to the configuration section for custom setup.
+  opts = {
+    auto_preview = false, -- don't auto-preview files as you navigate
+    auto_jump = false, -- don't auto-jump to files
+    focus = true, -- focus Trouble window when opened
+  },
   cmd = 'Trouble',
   -- stylua: ignore
   keys = {
     {
-      '<leader>xx',
+      '<leader>xd',
       '<cmd>Trouble diagnostics toggle<cr>',
       desc = 'Diagnostics (Trouble)',
     },
     {
-      '<leader>xX',
+      '<leader>xf',
       '<cmd>Trouble diagnostics toggle filter.buf=0<cr>',
       desc = 'Buffer Diagnostics (Trouble)',
     },
@@ -23,6 +27,11 @@ return {
       '<leader>cl',
       '<cmd>Trouble lsp toggle focus=false win.position=right<cr>',
       desc = 'Definitions / references',
+    },
+    {
+      '<leader>xg',
+      '<cmd>Trouble telescope toggle<cr>',
+      desc = 'Telescope results (Trouble)',
     },
   },
 }

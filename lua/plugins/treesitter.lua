@@ -29,6 +29,7 @@ return {
       'json5',
       'toml',
       'tsx',
+      'swift',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,

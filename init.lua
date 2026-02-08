@@ -4,6 +4,7 @@ vim.g.maplocalleader = ' '
 require 'options'
 require 'autocmd-highlight-post-copy'
 require 'autocmd-restore-position'
+require 'autocmd-nunjucks'
 require 'keymap'
 
 -- Setup lazy package manager

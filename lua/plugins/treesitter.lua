@@ -1,14 +1,14 @@
 -- Highlight, edit, and navigate code
 return {
   'nvim-treesitter/nvim-treesitter',
+  branch = 'main',
+  lazy = false,
   build = ':TSUpdate',
-  main = 'nvim-treesitter.configs', -- Sets main module to use for opts
-  deps = {
-    'nvim-treesitter/nvim-treesitter-textobjects',
-  },
-  -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
-  opts = {
-    ensure_installed = {
+  config = function()
+    require('nvim-treesitter').setup {}
+
+    -- Install parsers
+    require('nvim-treesitter').install {
       'bash',
       'c',
       'diff',
@@ -30,42 +30,26 @@ return {
       'toml',
       'tsx',
       'swift',
-    },
-    -- Autoinstall languages that are not installed
-    auto_install = true,
-    highlight = {
-      enable = true,
-      -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
-      --  If you are experiencing weird indenting issues, add the language to
-      --  the list of additional_vim_regex_highlighting and disabled languages for indent.
-      additional_vim_regex_highlighting = { 'ruby' },
-    },
-    indent = { enable = true, disable = { 'ruby' } },
+    }
 
-    incremental_selection = {
-      enable = true,
-      keymaps = {
-        init_selection = '<M-Up>',
-        node_incremental = '<M-Up>',
-        scope_incremental = false,
-        node_decremental = '<M-Down>',
-      },
-    },
-    textobjects = {
-      move = {
-        enable = true,
-        goto_next_start = { [']f'] = '@function.outer', [']c'] = '@class.outer', [']a'] = '@parameter.inner' },
-        goto_next_end = { [']F'] = '@function.outer', [']C'] = '@class.outer', [']A'] = '@parameter.inner' },
-        goto_previous_start = { ['[f'] = '@function.outer', ['[c'] = '@class.outer', ['[a'] = '@parameter.inner' },
-        goto_previous_end = { ['[F'] = '@function.outer', ['[C'] = '@class.outer', ['[A'] = '@parameter.inner' },
-      },
-    },
-  },
+    -- Enable treesitter highlighting for all filetypes with a parser
+    vim.api.nvim_create_autocmd('FileType', {
+      callback = function(ev)
+        -- Skip filetypes that rely on vim regex highlighting
+        if ev.match == 'ruby' then
+          return
+        end
+        pcall(vim.treesitter.start, ev.buf)
+      end,
+    })
 
-  -- There are additional nvim-treesitter modules that you can use to interact
-  -- with nvim-treesitter. You should go explore a few and see what interests you:
-  --
-  --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
-  --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
-  --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+    -- Enable treesitter-based indentation (disable for ruby)
+    vim.api.nvim_create_autocmd('FileType', {
+      callback = function(ev)
+        if ev.match ~= 'ruby' then
+          vim.bo[ev.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        end
+      end,
+    })
+  end,
 }

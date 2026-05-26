@@ -14,7 +14,7 @@ Plan to work through these items step by step.
 - [x] **`nvim-cmp` → `blink.cmp`** — biggest one. nvim-cmp is in maintenance-only mode (upstream effectively done). blink.cmp is the modern de facto choice: faster, much simpler config, and would let you delete the entire 30-line `<CR>` workaround in `autocompletion.lua:45-71`. Pairs cleanly with LuaSnip if you add snippets.
 - [x] **`mason-lspconfig` v2 API** — the `handlers = { function(server_name) ... end }` pattern in `lsp.lua:256-267` is the v1 way. v2 uses `automatic_enable` + Neovim 0.11's native `vim.lsp.config('serverName', {...})` / `vim.lsp.enable({...})`. Cleaner and unlocks the new built-in config system.
 - [x] **`vim.diagnostic.goto_next/goto_prev` is deprecated** in 0.11 → use `vim.diagnostic.jump({ count = 1 })` / `count = -1`. (`lsp.lua:112-113`)
-- [ ] **`client.supports_method(...)` → `client:supports_method(...)`** (method-call form, 0.11+). (`lsp.lua:145, 172`)
+- [x] **`client.supports_method(...)` → `client:supports_method(...)`** (method-call form, 0.11+). (`lsp.lua:145, 172`)
 - [ ] **Replace `indent-blankline.nvim` with `snacks.indent`** — you already load snacks, this is one less plugin.
 - [ ] **`vim-illuminate` overlaps with built-in LSP document_highlight** that you already wire up in `lsp.lua:145-166`. Pick one.
 - [ ] **Drop `FixCursorHold.nvim`** (transitive via neotest) — it was a workaround for an old Neovim bug long since fixed.

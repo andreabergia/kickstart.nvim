@@ -123,10 +123,6 @@ return {
           map('<C-k>', vim.lsp.buf.signature_help, 'Signature help', 'i')
           map('gK', vim.lsp.buf.signature_help, 'Signature help')
 
-          -- Set updatetime for CursorHold
-          -- 300ms of no cursor movement to trigger CursorHold
-          vim.opt.updatetime = 100
-
           -- Show diagnostic popup on cursor hover
           local diag_float_grp = vim.api.nvim_create_augroup('DiagnosticFloat', { clear = true })
           vim.api.nvim_create_autocmd('CursorHold', {

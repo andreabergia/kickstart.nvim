@@ -32,5 +32,5 @@ Plan to work through these items step by step.
 
 - [x] **`lua/plugins/copilot.lua`** — disabled in `init.lua:53`, just delete the file if you don't plan to re-enable.
 - [x] **`luvit-meta`** — modern `lazydev.nvim` ships `vim.uv` types itself; the meta library is no longer needed.
-- [ ] **`project.nvim`** — if you actually use `<leader>sp`, keep it. Otherwise drop; `persistence.nvim` + snacks dashboard's `recent_files` + `projects` section cover most of the same need.
+- [x] **`project.nvim`** — if you actually use `<leader>sp`, keep it. Otherwise drop; `persistence.nvim` + snacks dashboard's `recent_files` + `projects` section cover most of the same need.
 - [ ] **`autocmd-restore-position.lua` and `autocmd-highlight-post-copy.lua`** — Neovim's default config already does highlight-on-yank (`vim.hl.on_yank` in the built-in `nvim-defaults` autocmd group on 0.11+). The restore-cursor-position one isn't a default, so that one stays. Worth checking the highlight one before deleting.

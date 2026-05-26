@@ -28,7 +28,6 @@ require('lazy').setup {
   require 'plugins.git-blame',
   require 'plugins.gitlinker',
   require 'plugins.which-key',
-  require 'plugins.project',
   require 'plugins.telescope',
   require 'plugins.lsp',
   require 'plugins.autoformat',

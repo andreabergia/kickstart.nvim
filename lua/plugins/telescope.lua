@@ -77,11 +77,9 @@ return {
     -- Enable Telescope extensions if they are installed
     pcall(require('telescope').load_extension, 'fzf')
     pcall(require('telescope').load_extension, 'ui-select')
-    pcall(require('telescope').load_extension, 'projects')
 
     -- See `:help telescope.builtin`
     local builtin = require 'telescope.builtin'
-    local extensions = require('telescope').extensions
     vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Help' })
     vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = 'Keymaps' })
     vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = 'Files' })
@@ -91,7 +89,6 @@ return {
     vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = 'Diagnostics' })
     vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = 'Resume' })
     vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Buffers' })
-    vim.keymap.set('n', '<leader>sp', extensions.projects.projects, { desc = 'Projects' })
     vim.keymap.set('n', '<leader>sc', function()
       builtin.find_files { cwd = vim.fn.expand '%:p:h' }
     end, { desc = 'Current Directory' })

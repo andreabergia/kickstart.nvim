@@ -17,7 +17,7 @@ Plan to work through these items step by step.
 - [x] **`client.supports_method(...)` → `client:supports_method(...)`** (method-call form, 0.11+). (`lsp.lua:145, 172`)
 - [x] **Replace `indent-blankline.nvim` with `snacks.indent`** — you already load snacks, this is one less plugin.
 - [x] **`vim-illuminate` overlaps with built-in LSP document_highlight** that you already wire up in `lsp.lua:145-166`. Keep `vim-illuminate` for markdown and non-LSP fallback highlighting.
-- [ ] **Drop `FixCursorHold.nvim`** (transitive via neotest) — it was a workaround for an old Neovim bug long since fixed.
+- [x] **Drop `FixCursorHold.nvim`** (transitive via neotest) — it was a workaround for an old Neovim bug long since fixed.
 - [ ] **Consider `snacks.picker`** as a telescope replacement since you already pull snacks. Optional; telescope still works fine, but snacks.picker is where the ecosystem is heading and would let you drop `telescope-fzf-native`, `telescope-ui-select`, and `nui.nvim`.
 
 ## Add

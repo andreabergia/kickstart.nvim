@@ -56,6 +56,7 @@ require('lazy').setup {
   require 'plugins.rustacean',
   require 'plugins.crates',
   require 'plugins.aerial',
+  require 'plugins.render-markdown',
   require 'plugins.whitespace-nvim',
   require 'plugins.debug',
   require 'plugins.trouble',

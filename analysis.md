@@ -24,7 +24,7 @@ Plan to work through these items step by step.
 
 - [x] **`mini.surround`** — skipped; not useful if you do not use surround-style editing.
 - [x] **A snippet engine** — skipped; no snippets wanted.
-- [ ] **`render-markdown.nvim`** — pretty in-buffer markdown rendering. Useful if you read docs / notes in nvim.
+- [x] **`render-markdown.nvim`** — pretty in-buffer markdown rendering. Useful if you read docs / notes in nvim.
 - [ ] **In-editor AI** — copilot is commented out in `init.lua:53`. If you want one, `codecompanion.nvim` gives you a Claude/Anthropic chat panel that complements Claude Code (CLI) rather than duplicating it.
 - [ ] **`git-conflict.nvim`** — visual markers + per-hunk accept/reject for merge conflicts. Pairs well with the rest of your git stack.
 

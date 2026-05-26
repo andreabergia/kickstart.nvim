@@ -5,6 +5,7 @@ require 'options'
 require 'autocmd-highlight-post-copy'
 require 'autocmd-restore-position'
 require 'autocmd-nunjucks'
+require 'autocmd-diagnostic-float'
 require 'keymap'
 
 -- Setup lazy package manager

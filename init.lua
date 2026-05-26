@@ -51,7 +51,6 @@ require('lazy').setup {
   require 'plugins.flash',
   require 'plugins.todo-comment',
   require 'plugins.persistence',
-  -- require 'plugins.copilot',
   require 'plugins.neotest',
   require 'plugins.rustacean',
   require 'plugins.crates',

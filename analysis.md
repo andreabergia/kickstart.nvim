@@ -26,7 +26,7 @@ Plan to work through these items step by step.
 - [x] **A snippet engine** — skipped; no snippets wanted.
 - [x] **`render-markdown.nvim`** — pretty in-buffer markdown rendering. Useful if you read docs / notes in nvim.
 - [x] **In-editor AI** — skipped; no in-editor AI workflow wanted for now.
-- [ ] **`git-conflict.nvim`** — visual markers + per-hunk accept/reject for merge conflicts. Pairs well with the rest of your git stack.
+- [x] **`git-conflict.nvim`** — skipped; not needed for current merge-conflict workflow.
 
 ## Remove
 

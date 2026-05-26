@@ -121,7 +121,7 @@ return {
           map('gD', vim.lsp.buf.declaration, 'Goto Declaration')
 
           map('<C-k>', vim.lsp.buf.signature_help, 'Signature help', 'i')
-          map('<C-k>', vim.lsp.buf.signature_help, 'Signature help')
+          map('gK', vim.lsp.buf.signature_help, 'Signature help')
 
           -- Set updatetime for CursorHold
           -- 300ms of no cursor movement to trigger CursorHold

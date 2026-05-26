@@ -22,7 +22,7 @@ Plan to work through these items step by step.
 
 ## Add
 
-- [ ] **`mini.surround`** — already sitting commented in `mini.lua:18`. Uncomment it; `saiw)`, `sd'`, `sr)'` are quick wins.
+- [x] **`mini.surround`** — skipped; not useful if you do not use surround-style editing.
 - [ ] **A snippet engine** — zero snippets right now. LuaSnip + friendly-snippets makes LSP completions far more useful (function-call expansion, etc.).
 - [ ] **`render-markdown.nvim`** — pretty in-buffer markdown rendering. Useful if you read docs / notes in nvim.
 - [ ] **In-editor AI** — copilot is commented out in `init.lua:53`. If you want one, `codecompanion.nvim` gives you a Claude/Anthropic chat panel that complements Claude Code (CLI) rather than duplicating it.

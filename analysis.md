@@ -16,7 +16,7 @@ Plan to work through these items step by step.
 - [x] **`vim.diagnostic.goto_next/goto_prev` is deprecated** in 0.11 → use `vim.diagnostic.jump({ count = 1 })` / `count = -1`. (`lsp.lua:112-113`)
 - [x] **`client.supports_method(...)` → `client:supports_method(...)`** (method-call form, 0.11+). (`lsp.lua:145, 172`)
 - [x] **Replace `indent-blankline.nvim` with `snacks.indent`** — you already load snacks, this is one less plugin.
-- [ ] **`vim-illuminate` overlaps with built-in LSP document_highlight** that you already wire up in `lsp.lua:145-166`. Pick one.
+- [x] **`vim-illuminate` overlaps with built-in LSP document_highlight** that you already wire up in `lsp.lua:145-166`. Keep `vim-illuminate` for markdown and non-LSP fallback highlighting.
 - [ ] **Drop `FixCursorHold.nvim`** (transitive via neotest) — it was a workaround for an old Neovim bug long since fixed.
 - [ ] **Consider `snacks.picker`** as a telescope replacement since you already pull snacks. Optional; telescope still works fine, but snacks.picker is where the ecosystem is heading and would let you drop `telescope-fzf-native`, `telescope-ui-select`, and `nui.nvim`.
 
@@ -31,7 +31,6 @@ Plan to work through these items step by step.
 ## Remove
 
 - [ ] **`lua/plugins/copilot.lua`** — disabled in `init.lua:53`, just delete the file if you don't plan to re-enable.
-- [ ] **`vim-illuminate`** — duplicates LSP document_highlight (see Modernize).
 - [ ] **`luvit-meta`** — modern `lazydev.nvim` ships `vim.uv` types itself; the meta library is no longer needed.
 - [ ] **`project.nvim`** — if you actually use `<leader>sp`, keep it. Otherwise drop; `persistence.nvim` + snacks dashboard's `recent_files` + `projects` section cover most of the same need.
 - [ ] **`autocmd-restore-position.lua` and `autocmd-highlight-post-copy.lua`** — Neovim's default config already does highlight-on-yank (`vim.hl.on_yank` in the built-in `nvim-defaults` autocmd group on 0.11+). The restore-cursor-position one isn't a default, so that one stays. Worth checking the highlight one before deleting.

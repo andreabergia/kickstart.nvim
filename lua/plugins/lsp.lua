@@ -110,7 +110,7 @@ return {
           map('<leader>cr', vim.lsp.buf.rename, 'Code Rename')
 
           map(']q', vim.diagnostic.goto_next, 'Next Diagnostic')
-          map('[q', vim.diagnostic.goto_next, 'Previous Diagnostic')
+          map('[q', vim.diagnostic.goto_prev, 'Previous Diagnostic')
 
           -- Execute a code action, usually your cursor needs to be on top of an error
           -- or a suggestion from your LSP for this to activate.

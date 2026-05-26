@@ -4,7 +4,7 @@ Plan to work through these items step by step.
 
 ## Bugs to fix first
 
-- [ ] **`lua/plugins/lsp.lua:113`** — `[q` is mapped to `goto_next` (typo; should be `goto_prev`).
+- [x] **`lua/plugins/lsp.lua:113`** — `[q` is mapped to `goto_next` (typo; should be `goto_prev`).
 - [ ] **`<C-k>` collision** — `lua/keymap.lua:21` maps `<C-k>` to "move to upper window", but `lua/plugins/lsp.lua:123-124` re-maps `<C-k>` (normal mode) to `signature_help` buffer-locally. In any LSP buffer you lose window-up navigation. The insert-mode binding is the conventional one; drop the normal-mode line.
 - [ ] **`updatetime = 100` inside `LspAttach`** (`lsp.lua:128`) — runs every attach. Move to `options.lua`.
 - [ ] **DiagnosticFloat / CursorHold autocmd inside `LspAttach`** (`lsp.lua:131-137`) — same issue; it's `clear = true` so it's not leaking, but it's conceptually global, not per-buffer. Move it out.

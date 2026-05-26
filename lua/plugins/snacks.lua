@@ -3,6 +3,9 @@ return {
   -- Launch screen
   'folke/snacks.nvim',
   opts = {
+    indent = {
+      enabled = true,
+    },
     dashboard = {
       sections = {
         { section = 'header' },
